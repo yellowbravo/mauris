@@ -2,7 +2,43 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a95ba602-053a-4400-950d-a6c43d264b65" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/static/assets/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/css/style.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/js/dashboard.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/js/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/js/init-scripts/chart-js/chartjs-init.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/js/init-scripts/data-table/datatables-init.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/js/init-scripts/flot-chart/curvedLines.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/js/init-scripts/flot-chart/flot-chart-init.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/js/init-scripts/flot-chart/flot-tooltip/jquery.flot.tooltip.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/js/init-scripts/gmap/gmap.init.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/js/init-scripts/peitychart/peitychart.init.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/js/init-scripts/vector-map/vector.init.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/js/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/js/widgets.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/scss/_gauge.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/scss/_socials.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/scss/_switches.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/scss/_variables.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/scss/_widgets.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/scss/style.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/admin.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/avatar/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/avatar/2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/avatar/3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/avatar/4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/avatar/5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/avatar/6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/logo2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/placeholder.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/twitter_corner_black.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/twitter_corner_blue.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/consumer.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/consumer.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -13,24 +49,51 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/Mauris$Mauris.coverage" NAME="Mauris Coverage Results" MODIFIED="1541805534889" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Mauris$Mauris.coverage" NAME="Mauris Coverage Results" MODIFIED="1541810837964" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FileEditorManager">
     <leaf>
       <file leaf-file-name="app.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+            <state relative-caret-position="70">
+              <caret line="9" column="18" lean-forward="true" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="consumer.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="base.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/base.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="85" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="85" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="consumer.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/consumer.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="281" column="11" selection-start-line="281" selection-start-column="11" selection-end-line="281" selection-end-column="11" />
+            <state relative-caret-position="27">
+              <caret line="2" selection-start-line="2" selection-end-line="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/login.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="88">
+              <caret line="10" column="56" selection-start-line="10" selection-start-column="56" selection-end-line="10" selection-end-column="56" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="chartjs-init.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/assets/js/init-scripts/chart-js/chartjs-init.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-2986">
+              <caret line="168" column="49" selection-start-line="168" selection-start-column="40" selection-end-line="168" selection-end-column="49" />
             </state>
           </provider>
         </entry>
@@ -50,6 +113,14 @@
       <find>src=&quot;</find>
       <find>href=&quot;</find>
       <find>dashboar</find>
+      <find>You succ</find>
+      <find>members</find>
+      <find>user</find>
+      <find>line</find>
+      <find>lineChar</find>
+      <find>lineChart</find>
+      <find>log</find>
+      <find>Logout</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -58,8 +129,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app.py" />
         <option value="$PROJECT_DIR$/templates/consumer.html" />
+        <option value="$PROJECT_DIR$/templates/base.html" />
+        <option value="$PROJECT_DIR$/templates/login.html" />
+        <option value="$PROJECT_DIR$/app.py" />
       </list>
     </option>
   </component>
@@ -97,6 +170,57 @@
             <path>
               <item name="Mauris" type="b2602c69:ProjectViewProjectNode" />
               <item name="Mauris" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Mauris" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Mauris" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Mauris" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Mauris" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="init-scripts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Mauris" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Mauris" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="init-scripts" type="462c0819:PsiDirectoryNode" />
+              <item name="chart-js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Mauris" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Mauris" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="vendors" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Mauris" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Mauris" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="vendors" type="462c0819:PsiDirectoryNode" />
+              <item name="chart.js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Mauris" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Mauris" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="vendors" type="462c0819:PsiDirectoryNode" />
+              <item name="chart.js" type="462c0819:PsiDirectoryNode" />
+              <item name="dist" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Mauris" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Mauris" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -115,6 +239,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/templates" />
       <recent name="$PROJECT_DIR$/static" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -168,7 +293,14 @@
       <option name="project" value="LOCAL" />
       <updated>1541805635187</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="template ok">
+      <created>1541806499800</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1541806499800</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -178,7 +310,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.31439894" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.31439894" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Python Console" />
       <window_info anchor="bottom" id="Terminal" weight="0.32893" />
@@ -217,17 +349,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/static/assets/js/init-scripts/chart-js/chartjs-init.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2986">
+          <caret line="168" column="49" selection-start-line="168" selection-start-column="40" selection-end-line="168" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="10" column="56" selection-start-line="10" selection-start-column="56" selection-end-line="10" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+        <state relative-caret-position="70">
+          <caret line="9" column="18" lean-forward="true" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/consumer.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="281" column="11" selection-start-line="281" selection-start-column="11" selection-end-line="281" selection-end-column="11" />
+        <state relative-caret-position="27">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="85" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="85" />
         </state>
       </provider>
     </entry>

@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block body %}
+
+{% if session['logged_in'] %}
+        <p>You're logged in already!</p>
+    {% else %}
+        <div class="login-page">
+            <div class="form">
+                        <h3>Login</h3>
+
+                <form class="login-form" action="/login/" method="POST">
+                    <input class="form-control" type="username" name="username" placeholder="Username" value="config">
+                    <input class="form-control" type="password" name="password" placeholder="Password">
+                    <input type="submit" class="btn btn-primary btn-block" value="Log in">
+                </form>
+            </div>
+        </div>
+
+
+    {% endif %}
+
+    <style>
+
+        .login-page {
+            width: 360px;
+            padding: 8% 0 0;
+            margin: auto;
+        }
+        .form {
+            position: relative;
+            z-index: 1;
+            background: #FFFFFF;
+            max-width: 360px;
+            margin: 0 auto 100px;
+            padding: 45px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+
+        }
+    </style>
+
+    <script>
+        $('#navbar a').toggle();
+    </script>
+{% endblock %}
