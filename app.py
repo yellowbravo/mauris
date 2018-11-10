@@ -88,6 +88,15 @@ def meter(pod):
         return render_template('meter.html', **template_data)
 
 
+@app.route("/meter/<pod>/live/")
+def live(pod):
+    if not session.get('logged_in'):
+        return render_template('login.html')
+    else:
+        template_data = dict()
+
+        return render_template('live.html', **template_data)
+
 @app.route('/admin/')
 def admin_view():
     if not session.get('logged_in'):

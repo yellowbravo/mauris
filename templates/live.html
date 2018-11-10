@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block body %}
+
+
+    <div class="breadcrumbs">
+        <div class="col-sm-12">
+            <div class="page-header float-left">
+                <div class="page-title">
+                    <h1>LIVE </h1>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="content mt-3">
+    <div class="col-lg-3 col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="stat-widget-four">
+                                <div class="stat-icon dib">
+                                    <i class="ti-pulse text-muted"></i>
+                                </div>
+                                <div class="stat-content">
+                                    <div class="text-left dib">
+                                        <div class="stat-heading">A+</div>
+                                        <div class="stat-text" id="live_val" style="font-size: 20px"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+    <div class="col-lg-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="mb-3">Real Chart</h4>
+                                <div class="flot-container">
+                                    <div id="cpu-load" class="cpu-load"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    </div>
+
+
+
+{% endblock %}

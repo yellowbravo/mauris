@@ -11,6 +11,16 @@
             totalPoints = 300;
 
         function getRandomData() {
+            $.ajax({
+				url: 'https://gateway-test.ambrosus.com/events?assetId=0x28e42488023773bfd7bbe70da9c81573b8f86f9805821aecdd653812524a32ac&perPage=3',
+				type: "GET",
+				dataType: "json",
+				success: function(data) {
+				    var last_val = data['results'][0]['content']['data'][0]['measure'];
+				    console.log(last_val);
+				    $('#live_val').html(last_val + " kW")
+                }
+			});
 
             if ( data.length > 0 )
                 data = data.slice( 1 );
@@ -20,12 +30,12 @@
             while ( data.length < totalPoints ) {
 
                 var prev = data.length > 0 ? data[ data.length - 1 ] : 50,
-                    y = prev + Math.random() * 10 - 5;
+                    y = (prev + Math.random() * 2 - 1) / 1;
 
                 if ( y < 0 ) {
                     y = 0;
-                } else if ( y > 100 ) {
-                    y = 100;
+                } else if ( y > 5 ) {
+                    y = 5;
                 }
 
                 data.push( y );
@@ -43,7 +53,7 @@
 
         // Set up the control widget
 
-        var updateInterval = 30;
+        var updateInterval = 1000;
         $( "#updateInterval" ).val( updateInterval ).change( function () {
             var v = $( this ).val();
             if ( v && !isNaN( +v ) ) {
@@ -63,12 +73,12 @@
             },
             yaxis: {
                 min: 0,
-                max: 100
+                max: 5
             },
             xaxis: {
                 show: false
             },
-            colors: [ "#007BFF" ],
+            colors: [ "#f33435" ],
             grid: {
                 color: "transparent",
                 hoverable: true,
