@@ -6,7 +6,14 @@
         <div class="col-sm-4">
             <div class="page-header float-left">
                 <div class="page-title">
-                    <h1>{{ pod }}</h1>
+                    <h1>Compteur : {{ pod }} </h1>
+                        {% if agg_meters %}
+                            <p> aggrégation des sous-compeurs :
+                                {% for m in agg_meters %}
+                                    {{ m }}
+                                {% endfor %}
+                            </p>
+                        {% endif %}
                 </div>
             </div>
         </div>

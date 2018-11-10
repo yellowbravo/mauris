@@ -31,6 +31,8 @@ def meter(pod):
             template_data = {'has_data': True}
 
         template_data['pod'] = pod
+        my_pod = db.meters.find_one({'pod': pod})
+        template_data['agg_meters'] = my_pod.get('agg_meters', list())
 
         return render_template('meter.html', **template_data)
 
