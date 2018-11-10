@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% block body %}
+
+
+    <div class="breadcrumbs">
+        <div class="col-sm-4">
+            <div class="page-header float-left">
+                <div class="page-title">
+                    <h1>Code OBIS</h1>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="content mt-3">
+
+    <div class="animated fadeIn">
+                <div class="row">
+
+                    <div class="col-md-12">
+                        <div class="card">
+
+                            <div class="card-body">
+                                <table id="bootstrap-data-table-export" class="table table-striped table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>Nom</th>
+                                            <th>Code</th>
+                                            <th>Remarques</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    {% for o in obis_codes %}
+                                        <tr>
+                                            <td>{{ o.name }}</td>
+                                            <td>{{ o.code }}</td>
+                                            <td>{{ o.comment }}</td>
+                                        </tr>
+{% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- .animated -->
+
+    </div>
+
+{% endblock %}
