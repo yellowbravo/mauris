@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+{% block body %}
+
+
+    <div class="breadcrumbs">
+        <div class="col-sm-12">
+            <div class="page-header float-left">
+                <div class="page-title">
+                    <h1>Modifier un code OBIS </h1>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="content mt-3">
+        <div class="col-md-12">
+            <div class="card">
+
+                <div class="card-body card-block">
+                    <form action method="post" class="form-horizontal">
+                        <div class="row form-group">
+                            <div class="col col-md-3">
+                                <label for="name" class=" form control-label">Nom du champ </label>
+                            </div>
+                            <div class="col-12 col-md-9">
+                                <input type="text" id="name" name="name" value="{{ my_obis.name }}" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="row form-group">
+                            <div class="col col-md-3">
+                                <label for="code" class=" form control-label">Code OBIS </label>
+                            </div>
+                            <div class="col-12 col-md-9">
+                                <input type="text" id="code" name="code" value="{{ my_obis.code }}" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="row form-group">
+                            <div class="col col-md-3">
+                                <label for="unit" class=" form control-label">Unité </label>
+                            </div>
+                            <div class="col-12 col-md-9">
+                                <input type="text" id="unit" name="unit" value="{{ my_obis.unit }}" class="form-control">
+                            </div>
+                        </div>
+
+
+                        <div class="row form-group">
+                            <div class="col col-md-3">
+                                <label for="comment" class=" form control-label">Remarques </label>
+                            </div>
+                            <div class="col-12 col-md-9">
+                                <input type="text" id="comment" name="comment" value="{{ my_obis.comment }}" class="form-control">
+                            </div>
+                        </div>
+                </div>
+
+
+            </div>
+                <input type="submit" class="btn btn-primary btn-block" value="Enregister">
+
+            </form>
+
+
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

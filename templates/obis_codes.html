@@ -28,6 +28,7 @@
                                             <th>Nom</th>
                                             <th>Code</th>
                                             <th>Remarques</th>
+                                            <th>Modifier</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -36,6 +37,7 @@
                                             <td>{{ o.name }}</td>
                                             <td>{{ o.code }}</td>
                                             <td>{{ o.comment }}</td>
+                                            <td align="center"><a href="/admin/edit_obis_codes/{{ o.code }}"> <i class="menu-icon fa fa-edit"></i></a></td>
                                         </tr>
 {% endfor %}
                                     </tbody>
