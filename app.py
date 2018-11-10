@@ -36,6 +36,22 @@ def admin_view():
         return render_template('admin.html')
 
 
+@app.route('/admin/add_pod_meter/')
+def add_existing_meter_view():
+    if not session.get('logged_in'):
+        return render_template('login.html')
+    else:
+        return render_template('add_pod_meter.html')
+
+
+@app.route('/admin/add_virtual_meter/')
+def add_virtual_meter_view():
+    if not session.get('logged_in'):
+        return render_template('login.html')
+    else:
+        return render_template('add_virtual_meter.html')
+
+
 @app.route('/login/', methods=['POST'])
 def login():
     admin = 'frank.grassi@monthey.ch'
