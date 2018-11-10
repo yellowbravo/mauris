@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% block body %}
+
+
+    <div class="breadcrumbs">
+        <div class="col-sm-4">
+            <div class="page-header float-left">
+                <div class="page-title">
+                    <h1>Rajouter un compteur individuel </h1>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-8">
+            <div class="page-header float-right">
+                <div class="page-title">
+                    <ol class="breadcrumb text-right">
+                        <li class="active">Entrer un POD existant </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content mt-3">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    <strong>Définir les informations du compteur</strong>
+                </div>
+                <div class="card-body card-block">
+                    <form action method="post" class="form-horizontal">
+                        <div class="row form-group">
+                            <div class="col col-md-3">
+                                <label for="hf-meter" class=" form control-label">Nom du compteur </label>
+                            </div>
+                            <div class="col-12 col-md-9">
+                                <input type="email" id="hf-meter" name="hf-meter" placeholder="Entrer descriptif compteur..." class="form-control">
+                                <span class="help-block">Merci de définir un nom pour ce compteur</span>
+                            </div>
+                        </div>
+
+                        <div class="row form-group">
+                            <div class="col col-md-3">
+                                <label for="hf-pod" class=" form control-label">POD du compteur </label>
+                            </div>
+                            <div class="col-12 col-md-9">
+                                <input type="password" id="hf-pod" name="hf-pod" placeholder="Entrer un POD existant..." class="form-control">
+                                <span class="help-block">Merci d'ajouter le POD existant </span>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+
+                <div class="card-footer">
+                    <button type="submit" class="btn btn-primary btn-sm">
+                        <i class="fa fa-dot-circle-o"></i> Enregistrer
+                    </button>
+                    <button type="reset" class="btn btn-danger btn-sm">
+                        <i class="fa fa-ban"></i> Reset
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
