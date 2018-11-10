@@ -109,6 +109,32 @@ def add_existing_meter_view():
         return render_template('add_pod_meter.html')
 
 
+@app.route('/admin/edit_pod_meter/<pod>', methods=['GET', 'POST'])
+def edit_existing_meter_view(pod):
+    if not session.get('logged_in'):
+        return render_template('login.html')
+    else:
+        my_meter = db.meters.find_one({'pod': pod})
+
+        template_data = dict()
+        template_data['my_meter'] = my_meter
+        template_data['obis_code'] = list(db.obis_codes.find())
+
+        if request.method == 'POST':
+            new = {'name': request.form['name'],
+                   'pod': request.form['pod'],
+                   'address': request.form['address'],
+                   'city': request.form['city'],
+                   'obis': request.form.getlist('obis')
+                   }
+
+            db.meters.update_one({'_id': my_meter['_id']}, {'$set': new})
+
+            return admin_view()
+
+        return render_template('edit_pod_meter.html', **template_data)
+
+
 @app.route('/admin/add_obis_code/', methods=['GET', 'POST'])
 def add_obis_code():
     if not session.get('logged_in'):

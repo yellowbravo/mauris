@@ -6,7 +6,7 @@
         <div class="col-sm-12">
             <div class="page-header float-left">
                 <div class="page-title">
-                    <h1>Ajouter un compteur existant à partir d'un POD </h1>
+                    <h1>Modifier les informations du compteur</h1>
                 </div>
             </div>
         </div>
@@ -24,7 +24,7 @@
                                 <label for="name" class=" form control-label">Nom du compteur </label>
                             </div>
                             <div class="col-12 col-md-9">
-                                <input type="text" id="name" name="name" placeholder="Entrer descriptif compteur..." class="form-control">
+                                <input type="text" id="name" name="name" value="{{ my_meter.name }}" class="form-control">
                             </div>
                         </div>
 
@@ -33,7 +33,7 @@
                                 <label for="pod" class=" form control-label">POD du compteur </label>
                             </div>
                             <div class="col-12 col-md-9">
-                                <input type="text" id="pod" name="pod" placeholder="Entrer un POD existant..." class="form-control">
+                                <input type="text" id="pod" name="pod" value="{{ my_meter.pod }}" class="form-control">
                             </div>
                         </div>
 
@@ -42,7 +42,7 @@
                                 <label for="address" class=" form control-label">Adresse </label>
                             </div>
                             <div class="col-12 col-md-9">
-                                <input type="text" id="address" name="address" placeholder="Entrer adresse..." class="form-control">
+                                <input type="text" id="address" name="address" value="{{ my_meter.address }}" class="form-control">
                             </div>
                         </div>
 
@@ -51,19 +51,36 @@
                                 <label for="city" class=" form control-label">Localité </label>
                             </div>
                             <div class="col-12 col-md-9">
-                                <input type="text" id="city" name="city" placeholder="Entrer localité..." class="form-control">
+                                <input type="text" id="city" name="city" value="{{ my_meter.city }}" class="form-control">
                             </div>
                         </div>
+
+                        <div class="row form-group">
+                            <div class="col col-md-3">
+                                <label for="obis_to_add_up" class=" form control-label">Attribuer Obis </label>
+                            </div>
+
+                            <div class="col-12 col-md-9">
+                                <select name="obis" data-placeholder="{{ my_meter.obis }}" multiple class="standardSelect">
+                                    <option value=""></option>
+
+                                    {% for o in obis_code %}
+                                        <option value={{ o.code }}>{{ o.code }}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                        </div>
+
                 </div>
 
 
             </div>
             <input type="submit" class="btn btn-primary btn-block" value="Enregister">
 
-            </form>
-
-
         </div>
+
+        </form>
+
     </div>
     </div>
 
