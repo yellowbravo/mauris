@@ -16,6 +16,7 @@ app.secret_key = 'IsYRsz62EKhfWRKHEP2dyPIKGx55CD3G'
 def index():
     return admin_view()
 
+
 @app.route('/consumer/')
 def consumer():
     if not session.get('logged_in'):
@@ -172,6 +173,31 @@ def add_obis_code():
             return obis_view()
 
         return render_template('add_obis.html')
+
+
+@app.route('/admin/edit_obis_codes/<obis>', methods=['GET', 'POST'])
+def edit_obis_code(obis):
+    if not session.get('logged_in'):
+        return render_template('login.html')
+    else:
+        my_obis = obis
+        my_obis = db.obis_codes.find_one({'code': my_obis})
+        template_data = dict()
+        template_data['my_obis'] = my_obis
+
+        if request.method == 'POST':
+            obis_code = {'name': request.form['name'],
+                         'code': request.form['code'],
+                         'comment': request.form['comment'],
+                         'unit': request.form['unit'],
+
+                         }
+
+            db.obis_codes.update_one({'_id': my_obis['_id']}, {'$set': obis_code})
+
+            return obis_view()
+
+        return render_template('edit_obis.html', **template_data)
 
 
 @app.route('/admin/add_virtual_meter/', methods=['GET', 'POST'])
