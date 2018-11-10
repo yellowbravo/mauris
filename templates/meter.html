@@ -15,51 +15,94 @@
 
     <div class="content mt-3">
 
-    <div class="col-md-12">
-                <div class="card-body card-block">
-                    <form action="" method="post" class="form-horizontal">
-                        <div class="row form-group">
-                            <div class="col-md-1"><label for="hf-email" class=" form-control-label">De</label></div>
-                            <div class="col-md-4"><input type="date" id="hf-email" name="hf-email" placeholder="Enter Email..." class="form-control"></div>
-                            <div class="col-md-1"><label for="hf-password" class=" form-control-label">à</label></div>
-                            <div class="col-md-4"><input type="date" id="hf-password" name="hf-password" placeholder="Enter Password..." class="form-control"></div>
-                            <div class="col-md-2">
-                                <button type="submit" class="btn btn-primary btn-sm">
+        <div class="col-md-12">
+            <div class="card-body card-block">
+                <form action="" method="post" class="form-horizontal">
+                    <div class="row form-group">
+                        <div class="col-md-1"><label for="hf-email" class=" form-control-label">De</label></div>
+                        <div class="col-md-4"><input type="date" id="hf-email" name="hf-email" placeholder="Enter Email..." class="form-control"></div>
+                        <div class="col-md-1"><label for="hf-password" class=" form-control-label">à</label></div>
+                        <div class="col-md-4"><input type="date" id="hf-password" name="hf-password" placeholder="Enter Password..." class="form-control"></div>
+                        <div class="col-md-2">
+                            <button type="submit" class="btn btn-primary btn-sm">
                                 <i class="fa fa-dot-circle-o"></i> Submit
                             </button>
-                            </div>
-
                         </div>
 
-                    </form>
-                </div>
+                    </div>
+
+                </form>
             </div>
+        </div>
 
         {% if has_data %}
 
-
-            <div class="col-xl-3 col-lg-6">
+            <div class="col-lg-3 col-md-6">
                 <div class="card">
                     <div class="card-body">
-                        <div class="stat-widget-one">
-                            <div class="stat-icon dib"><i class="ti-money text-success border-success"></i></div>
-                            <div class="stat-content dib">
-                                <div class="stat-text">Pmax kW</div>
-                                <div class="stat-digit">1,012</div>
+                        <div class="stat-widget-four">
+                            <div class="stat-icon dib">
+                                <i class="ti-pulse text-muted"></i>
+                            </div>
+                            <div class="stat-content">
+                                <div class="text-left dib">
+                                    <div class="stat-heading">Pmax</div>
+                                    <div class="stat-text">12.2 kW</div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="col-xl-3 col-lg-6">
+            <div class="col-lg-3 col-md-6">
                 <div class="card">
                     <div class="card-body">
-                        <div class="stat-widget-one">
-                            <div class="stat-icon dib"><i class="ti-money text-success border-success"></i></div>
-                            <div class="stat-content dib">
-                                <div class="stat-text">Total kWh</div>
-                                <div class="stat-digit">1,012</div>
+                        <div class="stat-widget-four">
+                            <div class="stat-icon dib">
+                                <i class="ti-light-bulb text-muted"></i>
+                            </div>
+                            <div class="stat-content">
+                                <div class="text-left dib">
+                                    <div class="stat-heading">Consommation</div>
+                                    <div class="stat-text">12.2 kW</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="stat-widget-four">
+                            <div class="stat-icon dib">
+                                <i class="ti-pulse text-muted"></i>
+                            </div>
+                            <div class="stat-content">
+                                <div class="text-left dib">
+                                    <div class="stat-heading">Pmax</div>
+                                    <div class="stat-text">12.2 kW</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="stat-widget-four">
+                            <div class="stat-icon dib">
+                                <i class="ti-pulse text-muted"></i>
+                            </div>
+                            <div class="stat-content">
+                                <div class="text-left dib">
+                                    <div class="stat-heading">Pmax</div>
+                                    <div class="stat-text">12.2 kW</div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -69,12 +112,143 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="mb-3">Line Chart </h4>
-                        <canvas id="lineChart"></canvas>
+                        <h4 class="mb-3">Consommation </h4>
+                        <canvas id="canvas"></canvas>
                     </div>
                 </div>
             </div>
         {% endif %}
     </div>
+
+    <script>
+        var MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+        var config = {
+            type: 'line',
+            data: {
+                labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+                datasets: [{
+                    label: 'My First dataset',
+                    backgroundColor: 'rgb(255, 99, 132)',
+                    borderColor: 'rgb(255, 99, 132)',
+                    data: [
+                        10,
+                        10,
+                        10,
+                        10,
+                        10,
+                        10,
+                    ],
+                    fill: false,
+                }, {
+                    label: 'My Second dataset',
+                    fill: false,
+                    backgroundColor: 'rgb(54, 162, 235)',
+                    borderColor: 'rgb(54, 162, 235)',
+                    data: [
+                        15,
+                        1,
+                        12,
+                        6,
+                        20,
+                        10,
+                    ],
+                }]
+            },
+            options: {
+                responsive: true,
+                title: {
+                    display: true,
+                    text: 'Chart.js Line Chart'
+                },
+                tooltips: {
+                    mode: 'index',
+                    intersect: false,
+                },
+                hover: {
+                    mode: 'nearest',
+                    intersect: true
+                },
+                scales: {
+                    xAxes: [{
+                        display: true,
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Month'
+                        }
+                    }],
+                    yAxes: [{
+                        display: true,
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Value'
+                        }
+                    }]
+                }
+            }
+        };
+
+        window.onload = function() {
+            var ctx = document.getElementById('canvas').getContext('2d');
+            window.myLine = new Chart(ctx, config);
+        };
+
+        document.getElementById('randomizeData').addEventListener('click', function() {
+            config.data.datasets.forEach(function(dataset) {
+                dataset.data = dataset.data.map(function() {
+                    return randomScalingFactor();
+                });
+
+            });
+
+            window.myLine.update();
+        });
+
+        var colorNames = Object.keys(window.chartColors);
+        document.getElementById('addDataset').addEventListener('click', function() {
+            var newColor = 'rgb(255, 99, 132)';
+            var newDataset = {
+                label: 'Dataset ' + config.data.datasets.length,
+                backgroundColor: newColor,
+                borderColor: newColor,
+                data: [],
+                fill: false
+            };
+
+            for (var index = 0; index < config.data.labels.length; ++index) {
+                newDataset.data.push(randomScalingFactor());
+            }
+
+            config.data.datasets.push(newDataset);
+            window.myLine.update();
+        });
+
+        document.getElementById('addData').addEventListener('click', function() {
+            if (config.data.datasets.length > 0) {
+                var month = MONTHS[config.data.labels.length % MONTHS.length];
+                config.data.labels.push(month);
+
+                config.data.datasets.forEach(function(dataset) {
+                    dataset.data.push(randomScalingFactor());
+                });
+
+                window.myLine.update();
+            }
+        });
+
+        document.getElementById('removeDataset').addEventListener('click', function() {
+            config.data.datasets.splice(0, 1);
+            window.myLine.update();
+        });
+
+        document.getElementById('removeData').addEventListener('click', function() {
+            config.data.labels.splice(-1, 1); // remove the label first
+
+            config.data.datasets.forEach(function(dataset) {
+                dataset.data.pop();
+            });
+
+            window.myLine.update();
+        });
+    </script>
 
 {% endblock %}
