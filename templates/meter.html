@@ -10,7 +10,7 @@
                     {% if agg_meters %}
                         <p>Aggrégation des sous-compeurs :
                             {% for m in agg_meters %}
-                                {{ m }}
+                                <li>{{ m }}</li>
                             {% endfor %}
                         </p>
                     {% endif %}
@@ -35,6 +35,12 @@
                                 <button type="submit" class="btn btn-primary btn-sm">
                                     <i class="fa fa-dot-circle-o"></i> Submit
                                 </button>
+                                <a href="/admin/obis_codes/" >
+                                    <button type="button" class="btn btn-primary btn-sm" style="background-color: #4CAF50; border-color: #4CAF50;">
+
+                                <i class="fa ti-pulse" > </i> Live
+                                </button></a>
+
                             </div>
 
                         </div>
