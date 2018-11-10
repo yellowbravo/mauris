@@ -132,33 +132,13 @@
         var config = {
             type: 'line',
             data: {
-                labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+                labels: {{ index|safe }},
                 datasets: [{
                     label: 'My First dataset',
                     backgroundColor: 'rgb(255, 99, 132)',
                     borderColor: 'rgb(255, 99, 132)',
-                    data: [
-                        10,
-                        10,
-                        10,
-                        10,
-                        10,
-                        10,
-                    ],
+                    data: {{ val|safe }},
                     fill: false,
-                }, {
-                    label: 'My Second dataset',
-                    fill: false,
-                    backgroundColor: 'rgb(54, 162, 235)',
-                    borderColor: 'rgb(54, 162, 235)',
-                    data: [
-                        15,
-                        1,
-                        12,
-                        6,
-                        20,
-                        10,
-                    ],
                 }]
             },
             options: {

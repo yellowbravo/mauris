@@ -1,7 +1,8 @@
 from flask import Flask, render_template, flash, request, session, jsonify
 from pymongo import MongoClient
 import requests
-
+from operator import itemgetter
+import datetime
 client = MongoClient('mongodb://mauris:mauris2018@ds259253.mlab.com:59253/mauris')
 db = client['mauris']
 
@@ -29,16 +30,34 @@ def meter(pod):
     else:
         template_data = dict()
         if request.method == 'POST':
-            start = request.form['start']
-            end = request.form['end']
-            print(request.form)
-            url = "http://217.70.191.86:8080/mauris-mdw-0.0.1-SNAPSHOT/pods/{0}/data?from={1}&to={2}".format(pod, '01-04-2018', '01-04-2018')
+            start = datetime.datetime.strptime(request.form['start'], '%Y-%m-%d')
+            end = datetime.datetime.strptime(request.form['end'], '%Y-%m-%d') + datetime.timedelta(days=1)
 
-            r = requests.get(url)
+            # print(request.form)
+            # url = "http://217.70.191.86:8080/mauris-mdw-0.0.1-SNAPSHOT/pods/{0}/data?from={1}&to={2}".format(pod, '01-04-2018', '01-04-2018')
+            #
+            # r = requests.get(url)
+            #
+            # print(r.text)
 
-            print(r.text)
+            data = list(db.energy.find({'pod': pod, 'datetime': {'$gt': start, '$lte': end}}))
+            data = sorted(data, key=itemgetter('datetime'))
 
-            template_data = {'has_data': True}
+            index = list()
+            val = list()
+
+            for d in data:
+                ts = d['datetime']
+                date_str = "Date({0}, {1}, {2}, {3}, {4}, {5})".format(ts.year, ts.month, ts.day,
+                                                                       ts.hour, ts.minute, ts.second)
+
+                index.append(date_str)
+
+                val.append(d['1_5_0'])
+
+            template_data = {'has_data': True,
+                             'index': index,
+                             'val': val}
 
         template_data['pod'] = pod
         my_pod = db.meters.find_one({'pod': pod})
@@ -97,9 +116,9 @@ def add_obis_code():
     else:
         if request.method == 'POST':
             obis_code = {'name': request.form['name'],
-                     'code': request.form['code'],
-                     'comment': request.form['comment'],
-                     }
+                         'code': request.form['code'],
+                         'comment': request.form['comment'],
+                         }
 
             db.obis_codes.insert(obis_code)
 
