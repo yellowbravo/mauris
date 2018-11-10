@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% block body %}
+
+
+    <div class="breadcrumbs">
+        <div class="col-sm-12">
+            <div class="page-header float-left">
+                <div class="page-title">
+                    <h1>Ajouter un code Obis </h1>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="content mt-3">
+        <div class="col-md-12">
+            <div class="card">
+
+                <div class="card-body card-block">
+                    <form action method="post" class="form-horizontal">
+                        <div class="row form-group">
+                            <div class="col col-md-3">
+                                <label for="name" class=" form control-label">Nom du champ </label>
+                            </div>
+                            <div class="col-12 col-md-9">
+                                <input type="text" id="name" name="name" placeholder="Entrer le nom du code OBIS (A+, Ri-, etc.)..." class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="row form-group">
+                            <div class="col col-md-3">
+                                <label for="pod" class=" form control-label">Code OBIS </label>
+                            </div>
+                            <div class="col-12 col-md-9">
+                                <input type="text" id="pod" name="pod" placeholder="Entrer un code OBIS..." class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="row form-group">
+                            <div class="col col-md-3">
+                                <label for="address" class=" form control-label">Remarques </label>
+                            </div>
+                            <div class="col-12 col-md-9">
+                                <input type="text" id="address" name="address" placeholder="Remarques..." class="form-control">
+                            </div>
+                        </div>
+                </div>
+
+
+            </div>
+                <input type="submit" class="btn btn-primary btn-block" value="Enregister">
+
+            </form>
+
+
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

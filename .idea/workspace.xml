@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a95ba602-053a-4400-950d-a6c43d264b65" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Mauris.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Mauris.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/add_obis.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/add_pod_meter.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/add_pod_meter.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/add_virtual_meter.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/add_virtual_meter.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -44,11 +39,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="add_virtual_meter.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="add_virtual_meter.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/add_virtual_meter.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="63" column="140" selection-start-line="63" selection-start-column="140" selection-end-line="63" selection-end-column="140" />
+            <state relative-caret-position="314">
+              <caret line="64" column="62" lean-forward="true" selection-start-line="64" selection-start-column="62" selection-end-line="64" selection-end-column="62" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="add_obis.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/add_obis.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="44" selection-start-line="8" selection-start-column="44" selection-end-line="8" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -71,11 +75,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="base.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="51" column="101" selection-start-line="51" selection-start-column="101" selection-end-line="51" selection-end-column="101" />
+            <state relative-caret-position="321">
+              <caret line="131" column="25" selection-start-line="131" selection-start-column="25" selection-end-line="131" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -99,15 +103,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="136">
               <caret line="34" column="34" selection-start-line="34" selection-start-column="29" selection-end-line="34" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="chartjs-init.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/assets/js/init-scripts/chart-js/chartjs-init.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2520">
-              <caret line="168" column="49" selection-start-line="168" selection-start-column="40" selection-end-line="168" selection-end-column="49" />
             </state>
           </provider>
         </entry>
@@ -143,6 +138,7 @@
       <find>randomScalingFactor(),</find>
       <find>Math.round(Samples.utils.rand(-100, 100)),</find>
       <find>chosen</find>
+      <find>src=&quot;vendors/</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -156,10 +152,11 @@
         <option value="$PROJECT_DIR$/templates/consumer.html" />
         <option value="$PROJECT_DIR$/templates/meter.html" />
         <option value="$PROJECT_DIR$/templates/admin.html" />
-        <option value="$PROJECT_DIR$/templates/base.html" />
         <option value="$PROJECT_DIR$/templates/add_pod_meter.html" />
         <option value="$PROJECT_DIR$/app.py" />
         <option value="$PROJECT_DIR$/templates/add_virtual_meter.html" />
+        <option value="$PROJECT_DIR$/templates/add_obis.html" />
+        <option value="$PROJECT_DIR$/templates/base.html" />
       </list>
     </option>
   </component>
@@ -221,8 +218,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/static/images" />
       <recent name="$PROJECT_DIR$/templates" />
+      <recent name="$PROJECT_DIR$/static/images" />
       <recent name="$PROJECT_DIR$/static" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -435,7 +432,14 @@
       <option name="project" value="LOCAL" />
       <updated>1541842553026</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="add meters ready">
+      <created>1541845994154</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1541845994154</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -448,8 +452,8 @@
       <window_info anchor="bottom" id="Run" order="2" weight="0.31439894" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32893" />
       <window_info anchor="bottom" id="Python Console" order="7" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32893" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16996403" />
+      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32893" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16996403" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="right" id="SciView" order="3" />
@@ -478,7 +482,8 @@
     <MESSAGE value="admin page ready" />
     <MESSAGE value="meter page" />
     <MESSAGE value="logo" />
-    <option name="LAST_COMMIT_MESSAGE" value="logo" />
+    <MESSAGE value="add meters ready" />
+    <option name="LAST_COMMIT_MESSAGE" value="add meters ready" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/app.py">
@@ -663,13 +668,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="51" column="101" selection-start-line="51" selection-start-column="101" selection-end-line="51" selection-end-column="101" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/add_pod_meter.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-200">
@@ -689,8 +687,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/add_virtual_meter.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="63" column="140" selection-start-line="63" selection-start-column="140" selection-end-line="63" selection-end-column="140" />
+        <state relative-caret-position="314">
+          <caret line="64" column="62" lean-forward="true" selection-start-line="64" selection-start-column="62" selection-end-line="64" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/add_obis.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="44" selection-start-line="8" selection-start-column="44" selection-end-line="8" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="321">
+          <caret line="131" column="25" selection-start-line="131" selection-start-column="25" selection-end-line="131" selection-end-column="25" />
         </state>
       </provider>
     </entry>

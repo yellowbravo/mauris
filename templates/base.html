@@ -44,12 +44,19 @@
                 <li class="active">
                     <a href="/admin/"> <i class="menu-icon fa fa-dashboard"></i>Points de mesure </a>
                 </li>
+                <li class="active">
+                    <a href="/admin/"> <i class="menu-icon fa fa-dashboard"></i>Codes OBIS </a>
+                </li>
+
                 <h3 class="menu-title">Outils</h3>
                 <li>
-                    <a href="/admin/add_pod_meter/"> <i class="menu-icon fa fa-edit"></i>Ajouter un compteur</a>
+                    <a href="/admin/add_pod_meter/"> <i class="menu-icon fa fa-edit"></i>Nouveau compteur</a>
                 </li>
                 <li>
                     <a href="/admin/add_virtual_meter/"> <i class="menu-icon fa fa-edit"></i>Créer un virtuel </a>
+                </li>
+                <li>
+                    <a href="/admin/add_obis_code/"> <i class="menu-icon fa fa-edit"></i>Nouvel OBIS </a>
                 </li>
             </ul>
         </div><!-- /.navbar-collapse -->
@@ -112,6 +119,17 @@
 
 <script src="/static/vendors/chosen/chosen.jquery.min.js"></script>
 
+<script src="/static/vendors/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="/static/vendors/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <script src="/static/vendors/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="/static/vendors/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js"></script>
+    <script src="/static/vendors/jszip/dist/jszip.min.js"></script>
+    <script src="/static/vendors/pdfmake/build/pdfmake.min.js"></script>
+    <script src="/static/vendors/pdfmake/build/vfs_fonts.js"></script>
+    <script src="/static/vendors/datatables.net-buttons/js/buttons.html5.min.js"></script>
+    <script src="/static/vendors/datatables.net-buttons/js/buttons.print.min.js"></script>
+    <script src="/static/vendors/datatables.net-buttons/js/buttons.colVis.min.js"></script>
+    <script src="/static/assets/js/init-scripts/data-table/datatables-init.js"></script>
 <script>
     jQuery(document).ready(function() {
         jQuery(".standardSelect").chosen({
