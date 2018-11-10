@@ -1,6 +1,7 @@
 from flask import Flask, render_template, flash, request, session, jsonify
 from pymongo import MongoClient
 import requests
+import pandas as pd
 from operator import itemgetter
 import datetime
 client = MongoClient('mongodb://mauris:mauris2018@ds259253.mlab.com:59253/mauris')
@@ -40,24 +41,34 @@ def meter(pod):
             #
             # print(r.text)
 
-            data = list(db.energy.find({'pod': pod, 'datetime': {'$gt': start, '$lte': end}}))
-            data = sorted(data, key=itemgetter('datetime'))
+            raw_data = list(db.energy.find({'pod': pod, 'datetime': {'$gt': start, '$lte': end}}))
+            raw_data = sorted(raw_data, key=itemgetter('datetime'))
+
+            obis_codes = db.meters.find_one({'pod': pod})['obis']
+            df = pd.DataFrame(raw_data)
+            sums = df.sum()
+            data = dict()
+            for o in obis_codes:
+                o = o.replace('.', '_')
+                data[o] = {'data': list(df[o].values),
+                           'sum': sums[o],
+                           'pmax': df[o].max()}
 
             index = list()
-            val = list()
 
-            for d in data:
+            for d in raw_data:
                 ts = d['datetime']
                 date_str = "Date({0}, {1}, {2}, {3}, {4}, {5})".format(ts.year, ts.month, ts.day,
                                                                        ts.hour, ts.minute, ts.second)
 
                 index.append(date_str)
 
-                val.append(d['1_5_0'])
-
-            template_data = {'has_data': True,
-                             'index': index,
-                             'val': val}
+            template_data = {
+                'data': data,
+                'has_data': True,
+                'index': index,
+                'obis_codes': obis_codes,
+                }
 
         template_data['pod'] = pod
         my_pod = db.meters.find_one({'pod': pod})
@@ -118,6 +129,8 @@ def add_obis_code():
             obis_code = {'name': request.form['name'],
                          'code': request.form['code'],
                          'comment': request.form['comment'],
+                         'unit': request.form['unit'],
+
                          }
 
             db.obis_codes.insert(obis_code)

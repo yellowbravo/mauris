@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a95ba602-053a-4400-950d-a6c43d264b65" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/obis_codes.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/mauris_logo_short.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/mauris_logo_sm.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/add_obis.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/add_obis.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/meter.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/meter.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,11 +22,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="app.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="app.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="64" column="18" selection-start-line="64" selection-start-column="18" selection-end-line="64" selection-end-column="18" />
+            <state relative-caret-position="251">
+              <caret line="56" column="26" lean-forward="true" selection-start-line="56" selection-start-column="26" selection-end-line="56" selection-end-column="26" />
               <folding>
                 <element signature="e#0#74#0" expanded="true" />
               </folding>
@@ -55,7 +56,7 @@
         <entry file="file://$PROJECT_DIR$/templates/add_virtual_meter.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="314">
-              <caret line="64" column="62" lean-forward="true" selection-start-line="64" selection-start-column="62" selection-end-line="64" selection-end-column="62" />
+              <caret line="64" column="62" selection-start-line="64" selection-start-column="62" selection-end-line="64" selection-end-column="62" />
             </state>
           </provider>
         </entry>
@@ -63,17 +64,17 @@
       <file leaf-file-name="add_obis.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/add_obis.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="301">
-              <caret line="44" column="77" selection-start-line="44" selection-start-column="77" selection-end-line="44" selection-end-column="77" />
+            <state relative-caret-position="285">
+              <caret line="44" column="108" selection-start-line="44" selection-start-column="108" selection-end-line="44" selection-end-column="108" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="meter.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="meter.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/meter.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="52">
-              <caret line="24" column="98" selection-start-line="24" selection-start-column="98" selection-end-line="24" selection-end-column="98" />
+            <state relative-caret-position="780">
+              <caret line="52" column="55" selection-start-line="52" selection-start-column="55" selection-end-line="52" selection-end-column="55" />
             </state>
           </provider>
         </entry>
@@ -81,8 +82,8 @@
       <file leaf-file-name="admin.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/admin.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="24" column="76" selection-start-line="24" selection-start-column="76" selection-end-line="24" selection-end-column="76" />
+            <state relative-caret-position="315">
+              <caret line="21" selection-start-line="21" selection-end-line="21" />
             </state>
           </provider>
         </entry>
@@ -91,7 +92,7 @@
         <entry file="file://$PROJECT_DIR$/templates/base.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="254">
-              <caret line="50" column="20" lean-forward="true" selection-start-line="50" selection-start-column="20" selection-end-line="50" selection-end-column="20" />
+              <caret line="50" column="20" selection-start-line="50" selection-start-column="20" selection-end-line="50" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -155,12 +156,12 @@
         <option value="$PROJECT_DIR$/templates/consumer.html" />
         <option value="$PROJECT_DIR$/templates/add_pod_meter.html" />
         <option value="$PROJECT_DIR$/templates/add_virtual_meter.html" />
-        <option value="$PROJECT_DIR$/templates/admin.html" />
-        <option value="$PROJECT_DIR$/templates/meter.html" />
-        <option value="$PROJECT_DIR$/templates/add_obis.html" />
         <option value="$PROJECT_DIR$/templates/obis_codes.html" />
         <option value="$PROJECT_DIR$/templates/base.html" />
+        <option value="$PROJECT_DIR$/templates/admin.html" />
+        <option value="$PROJECT_DIR$/templates/add_obis.html" />
         <option value="$PROJECT_DIR$/app.py" />
+        <option value="$PROJECT_DIR$/templates/meter.html" />
       </list>
     </option>
   </component>
@@ -245,7 +246,9 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/templates/add_virtual_meter.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/templates/admin.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/templates/meter.html</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Created" />
@@ -450,7 +453,21 @@
       <option name="project" value="LOCAL" />
       <updated>1541846511366</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="obis">
+      <created>1541848923492</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1541848923492</updated>
+    </task>
+    <task id="LOCAL-00012" summary="graf ok">
+      <created>1541853618909</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1541853618909</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -495,7 +512,9 @@
     <MESSAGE value="logo" />
     <MESSAGE value="add meters ready" />
     <MESSAGE value="data table" />
-    <option name="LAST_COMMIT_MESSAGE" value="data table" />
+    <MESSAGE value="obis" />
+    <MESSAGE value="graf ok" />
+    <option name="LAST_COMMIT_MESSAGE" value="graf ok" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/app.py">
@@ -676,35 +695,14 @@
     <entry file="file://$PROJECT_DIR$/templates/add_virtual_meter.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="314">
-          <caret line="64" column="62" lean-forward="true" selection-start-line="64" selection-start-column="62" selection-end-line="64" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/admin.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="24" column="76" selection-start-line="24" selection-start-column="76" selection-end-line="24" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/meter.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="24" column="98" selection-start-line="24" selection-start-column="98" selection-end-line="24" selection-end-column="98" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/add_obis.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="44" column="77" selection-start-line="44" selection-start-column="77" selection-end-line="44" selection-end-column="77" />
+          <caret line="64" column="62" selection-start-line="64" selection-start-column="62" selection-end-line="64" selection-end-column="62" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="254">
-          <caret line="50" column="20" lean-forward="true" selection-start-line="50" selection-start-column="20" selection-end-line="50" selection-end-column="20" />
+          <caret line="50" column="20" selection-start-line="50" selection-start-column="20" selection-end-line="50" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -715,13 +713,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/admin.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/add_obis.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="44" column="108" selection-start-line="44" selection-start-column="108" selection-end-line="44" selection-end-column="108" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="64" column="18" selection-start-line="64" selection-start-column="18" selection-end-line="64" selection-end-column="18" />
+        <state relative-caret-position="251">
+          <caret line="56" column="26" lean-forward="true" selection-start-line="56" selection-start-column="26" selection-end-line="56" selection-end-column="26" />
           <folding>
             <element signature="e#0#74#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/meter.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="780">
+          <caret line="52" column="55" selection-start-line="52" selection-start-column="55" selection-end-line="52" selection-end-column="55" />
         </state>
       </provider>
     </entry>
