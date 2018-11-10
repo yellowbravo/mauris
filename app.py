@@ -4,7 +4,8 @@ import requests
 import pandas as pd
 from operator import itemgetter
 import datetime
-client = MongoClient('mongodb://mauris:mauris2018@ds259253.mlab.com:59253/mauris')
+client = MongoClient('mongodb://mauris:mauris2018@ds259253.mlab.com:59253/mauris',
+                     connectTimeoutMS=30000, socketTimeoutMS=None, socketKeepAlive=True, connect=False, maxPoolsize=1)
 db = client['mauris']
 
 app = Flask(__name__)
@@ -78,7 +79,7 @@ def meter(pod):
                 'obis_codes': obis_codes,
                 'start': start.strftime("%d-%m-%Y"),
                 'end': end.strftime("%d-%m-%Y"),
-                }
+            }
 
         template_data['pod'] = pod
         template_data['name'] = db.meters.find_one({'pod': pod})['name']
