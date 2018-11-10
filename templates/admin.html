@@ -28,6 +28,7 @@
                                     <th>Nom</th>
                                     <th>Adresse</th>
                                     <th>Ville</th>
+                                    <th>Modifier</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -37,6 +38,7 @@
                                         <td>{{ m.name }}</td>
                                         <td>{{ m.address }}</td>
                                         <td>{{ m.city }}</td>
+                                        <td align="center"><a href="/admin/edit_pod_meter/{{ m.pod }}"> <i class="menu-icon fa fa-edit"></i></a></td>
                                     </tr>
                                 {% endfor %}
                                 </tbody>
