@@ -2,6 +2,7 @@ from flask import Flask, render_template, flash, request, session, jsonify
 
 
 app = Flask(__name__)
+
 app.secret_key = 'IsYRsz62EKhfWRKHEP2dyPIKGx55CD3G'
 
 
@@ -11,6 +12,20 @@ def consumer():
         return render_template('login.html')
     else:
         return render_template('consumer.html')
+
+
+@app.route("/meter/<pod>", methods=['GET', 'POST'])
+def meter(pod):
+    if not session.get('logged_in'):
+        return render_template('login.html')
+    else:
+        template_data = dict()
+        if request.method == 'POST':
+            template_data = {'has_data': True}
+
+        template_data['pod'] = pod
+
+        return render_template('meter.html', **template_data)
 
 
 @app.route('/admin/')
@@ -50,5 +65,6 @@ def logout():
     return consumer()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     app.run(debug=True, use_reloader=True)
+
