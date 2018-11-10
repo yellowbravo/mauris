@@ -32,6 +32,7 @@ def meter(pod):
     else:
         template_data = dict()
         template_data['has_data'] = False
+
         if request.method == 'POST':
             start = datetime.datetime.strptime(request.form['start'], '%Y-%m-%d')
             end = datetime.datetime.strptime(request.form['end'], '%Y-%m-%d') + datetime.timedelta(days=1)
@@ -58,7 +59,7 @@ def meter(pod):
                            'sum': sums[o],
                            'pmax': df[o].max(),
                            'name': ob['name'],
-                           'color': 'rgb(150,25,30)'
+                           'color': ob.get('color', 'rgb(180,97,30)')
                            }
 
             index = list()
@@ -80,6 +81,7 @@ def meter(pod):
                 }
 
         template_data['pod'] = pod
+        template_data['name'] = db.meters.find_one({'pod': pod})['name']
         my_pod = db.meters.find_one({'pod': pod})
         template_data['agg_meters'] = my_pod.get('agg_meters', list())
 
@@ -190,7 +192,7 @@ def edit_obis_code(obis):
                          'code': request.form['code'],
                          'comment': request.form['comment'],
                          'unit': request.form['unit'],
-
+                         'color': '#' + request.form['color'],
                          }
 
             db.obis_codes.update_one({'_id': my_obis['_id']}, {'$set': obis_code})

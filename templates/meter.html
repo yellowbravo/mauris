@@ -3,10 +3,10 @@
 
 
     <div class="breadcrumbs">
-        <div class="col-sm-4">
+        <div class="col-sm-12">
             <div class="page-header float-left">
                 <div class="page-title">
-                    <h1>Compteur : {{ pod }} </h1>
+                    <h1>{{ name }} - {{ pod }} </h1>
                     {% if agg_meters %}
                         <p>Aggrégation des sous-compeurs :
                             {% for m in agg_meters %}
@@ -59,7 +59,7 @@
                                 </div>
                                 <div class="stat-content">
                                     <div class="text-left dib">
-                                        <div class="stat-heading">{{ val.name }} - Energie</div>
+                                        <div class="stat-heading">{{ val.name }} (Energie)</div>
                                         <div class="stat-text">{{ val.sum }} kWh</div>
                                     </div>
                                 </div>
@@ -76,7 +76,7 @@
                                 </div>
                                 <div class="stat-content">
                                     <div class="text-left dib">
-                                        <div class="stat-heading">{{ val.name }} - PMax</div>
+                                        <div class="stat-heading">{{ val.name }} (PMax)</div>
                                         <div class="stat-text">{{ val.pmax }} kW</div>
                                     </div>
                                 </div>
