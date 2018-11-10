@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="/static/vendors/selectFX/css/cs-skin-elastic.css">
     <link rel="stylesheet" href="/static/vendors/jqvmap/dist/jqvmap.min.css">
 
+    <link rel="stylesheet" href="/static/vendors/chosen/chosen.min.css">
 
     <link rel="stylesheet" href="/static/assets/css/style.css">
 
@@ -43,12 +44,12 @@
                 <li class="active">
                     <a href="/admin/"> <i class="menu-icon fa fa-dashboard"></i>Points de mesure </a>
                 </li>
-                <h3 class="menu-title">Ajouter des compteurs</h3>
+                <h3 class="menu-title">Outils</h3>
                 <li>
-                    <a href="/admin/add_pod_meter/"> <i class="menu-icon fa fa-edit"></i>Compteur existant </a>
+                    <a href="/admin/add_pod_meter/"> <i class="menu-icon fa fa-edit"></i>Ajouter un compteur</a>
                 </li>
                 <li>
-                    <a href="/admin/add_virtual_meter/"> <i class="menu-icon fa fa-edit"></i>Compteur virtuel </a>
+                    <a href="/admin/add_virtual_meter/"> <i class="menu-icon fa fa-edit"></i>Créer un virtuel </a>
                 </li>
             </ul>
         </div><!-- /.navbar-collapse -->
@@ -78,11 +79,6 @@
                     </a>
 
                     <div class="user-menu dropdown-menu">
-                        <a class="nav-link" href="#"><i class="fa fa-user"></i> My Profile</a>
-
-                        <a class="nav-link" href="#"><i class="fa fa-user"></i> Notifications <span class="count">13</span></a>
-
-                        <a class="nav-link" href="#"><i class="fa fa-cog"></i> Settings</a>
 
                         <a class="nav-link" href="/logout/"><i class="fa fa-power-off"></i> Logout</a>
                     </div>
@@ -113,6 +109,19 @@
 <script src="/static/vendors/jqvmap/dist/jquery.vmap.min.js"></script>
 <script src="/static/vendors/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
 <script src="/static/vendors/jqvmap/dist/maps/jquery.vmap.world.js"></script>
+
+<script src="/static/vendors/chosen/chosen.jquery.min.js"></script>
+
+<script>
+    jQuery(document).ready(function() {
+        jQuery(".standardSelect").chosen({
+            disable_search_threshold: 10,
+            no_results_text: "Oops, nothing found!",
+            width: "100%"
+        });
+    });
+</script>
+
 
 <!--  Chart js -->
 <script src="/static/vendors/chart.js/dist/Chart.bundle.min.js"></script>

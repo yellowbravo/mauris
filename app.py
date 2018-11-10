@@ -1,10 +1,17 @@
 from flask import Flask, render_template, flash, request, session, jsonify
+from pymongo import MongoClient
 
+client = MongoClient('mongodb://mauris:mauris2018@ds259253.mlab.com:59253/mauris')
+db = client['mauris']
 
 app = Flask(__name__)
 
 app.secret_key = 'IsYRsz62EKhfWRKHEP2dyPIKGx55CD3G'
 
+
+@app.route('/')
+def index():
+    return admin_view()
 
 @app.route('/consumer/')
 def consumer():
@@ -33,23 +40,54 @@ def admin_view():
     if not session.get('logged_in'):
         return render_template('login.html')
     else:
-        return render_template('admin.html')
+        meters = list(db.meters.find())
+
+        template_data = {'meters': meters}
+
+        return render_template('admin.html', **template_data)
 
 
-@app.route('/admin/add_pod_meter/')
+@app.route('/admin/add_pod_meter/', methods=['GET', 'POST'])
 def add_existing_meter_view():
     if not session.get('logged_in'):
         return render_template('login.html')
     else:
+        if request.method == 'POST':
+            meter = {'name': request.form['name'],
+                     'pod': request.form['pod'],
+                     'address': request.form['address'],
+                     'city': request.form['city']
+                     }
+
+            db.meters.insert(meter)
+
+            return admin_view()
+
         return render_template('add_pod_meter.html')
 
 
-@app.route('/admin/add_virtual_meter/')
+@app.route('/admin/add_virtual_meter/', methods=['GET', 'POST'])
 def add_virtual_meter_view():
     if not session.get('logged_in'):
         return render_template('login.html')
     else:
-        return render_template('add_virtual_meter.html')
+        if request.method == 'POST':
+            meter = {'name': request.form['name'],
+                     'pod': request.form['pod'],
+                     'address': request.form['address'],
+                     'city': request.form['city'],
+                     'agg_meters': request.form.getlist('meters')
+                     }
+
+            db.meters.insert(meter)
+
+            return admin_view()
+
+        meters = list(db.meters.find())
+
+        template_data = {'meters': meters}
+
+        return render_template('add_virtual_meter.html', **template_data)
 
 
 @app.route('/login/', methods=['POST'])

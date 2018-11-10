@@ -42,13 +42,14 @@
                                         </tr>
                                     </thead>
                                     <tbody>
+                                    {% for m in meters %}
                                         <tr>
-                                            <td><a href="/meter/CH1014001234500000000000000014497">CH1014001234500000000000000014497</a> </td>
-                                            <td>Carrière</td>
-                                            <td>Rue Centrale 12</td>
-                                            <td>Monthey</td>
+                                            <td><a href="/meter/{{ m.pod }}">{{ m.pod }}</a> </td>
+                                            <td>{{ m.name }}</td>
+                                            <td>{{ m.address }}</td>
+                                            <td>{{ m.city }}</td>
                                         </tr>
-
+{% endfor %}
                                     </tbody>
                                 </table>
                             </div>

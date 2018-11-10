@@ -1,93 +1,86 @@
 {% extends "base.html" %}
 {% block body %}
 
+
     <div class="breadcrumbs">
-        <div class="col-sm-4">
+        <div class="col-sm-12">
             <div class="page-header float-left">
                 <div class="page-title">
-                    <h1>Rajouter un compteur virtuel </h1>
+                    <h1>Créer un compteur virtuel à partir de plusieurs POD existants</h1>
                 </div>
             </div>
         </div>
-        <div class="col-sm-8">
-            <div class="page-header float-right">
-                <div class="page-title">
-                    <ol class="breadcrumb text-right">
-                        <li class="active">Génération d'un POD virtuel </li>
-                    </ol>
-                </div>
-            </div>
-        </div>
+
     </div>
 
     <div class="content mt-3">
         <div class="col-md-12">
             <div class="card">
-                <div class="card-header">
-                    <strong>Définir les informations du nouveau compteur</strong>
-                </div>
+
                 <div class="card-body card-block">
                     <form action method="post" class="form-horizontal">
                         <div class="row form-group">
                             <div class="col col-md-3">
-                                <label for="hf-meter" class=" form control-label">Nom du compteur </label>
+                                <label for="name" class=" form control-label">Nom du compteur </label>
                             </div>
                             <div class="col-12 col-md-9">
-                                <input type="email" id="hf-meter" name="hf-meter" placeholder="Entrer descriptif compteur..." class="form-control">
-                                <span class="help-block">Merci de définir un nom pour ce compteur</span>
+                                <input type="text" id="name" name="name" placeholder="Entrer descriptif compteur..." class="form-control">
                             </div>
                         </div>
 
                         <div class="row form-group">
                             <div class="col col-md-3">
-                                <label for="hf-pod" class=" form control-label">POD du compteur </label>
+                                <label for="pod" class=" form control-label">POD du compteur </label>
                             </div>
                             <div class="col-12 col-md-9">
-                                <input type="password" id="hf-pod" name="hf-pod" placeholder="Entrer un nouveau POD..." class="form-control">
-                                <span class="help-block">Merci d'ajouter un POD </span>
+                                <input type="text" id="pod" name="pod" placeholder="Entrer un POD existant..." class="form-control">
                             </div>
                         </div>
 
                         <div class="row form-group">
-                            <div class="card-body">
-                                <select data-placeholder="Sélectionner des compteurs..." multiple class="standardSelect" style="display: none;">
-                                    <option value></option>
-                                    <option value="CH1014001234500000000000000014497">CH1014001234500000000000000014497</option>
-                                    <option value="CH1014001234500000000000000014498">CH1014001234500000000000000014498</option>
-                                    <option value="CH1014001234500000000000000014499">CH1014001234500000000000000014499</option>
-                                </select>
-
-                                <div class="chosen-container chosen-container-multi" title style="width: 100%;">
-                                    <ul class="chosen-choices">
-                                        <li class="search-field">
-                                            <input class="chosen-search-input default" type="text" autocomplete="off" value="Sélectionner des compteurs..." style="width: 137px;">
-                                        </li>
-                                    </ul>
-                                    <div class="chosen-drop">
-                                        <ul class="chosen-results">
-                                            <li class="active-result" data-option-array-index="1">CH1014001234500000000000000014497</li>
-                                            <li class="active-result" data-option-array-index="2">CH1014001234500000000000000014498</li>
-                                            <li class="active-result" data-option-array-index="3">CH1014001234500000000000000014499</li>
-                                        </ul>
-                                    </div>
-                                </div>
+                            <div class="col col-md-3">
+                                <label for="address" class=" form control-label">Adresse </label>
+                            </div>
+                            <div class="col-12 col-md-9">
+                                <input type="text" id="address" name="address" placeholder="Entrer adresse..." class="form-control">
                             </div>
                         </div>
 
-                    </form>
+                        <div class="row form-group">
+                            <div class="col col-md-3">
+                                <label for="city" class=" form control-label">Localité </label>
+                            </div>
+                            <div class="col-12 col-md-9">
+                                <input type="text" id="city" name="city" placeholder="Entrer localité..." class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="row form-group">
+                            <div class="col col-md-3">
+                                <label for="meter_to_add_up" class=" form control-label">Compteurs existants </label>
+                            </div>
+
+                            <div class="col-12 col-md-9">
+                                <select  name="meters" data-placeholder="Choisir un compteur..." multiple class="standardSelect">
+                                    <option value=""></option>
+
+                                    {% for m in meters %}
+                                        <option value={{ m.pod }}>{{ m.pod }}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                        </div>
                 </div>
 
-                <div class="card-footer">
-                    <button type="submit" class="btn btn-primary btn-sm">
-                        <i class="fa fa-dot-circle-o"></i> Enregistrer
-                    </button>
-                    <button type="reset" class="btn btn-danger btn-sm">
-                        <i class="fa fa-ban"></i> Reset
-                    </button>
-                </div>
 
             </div>
+                <input type="submit" class="btn btn-primary btn-block" value="Enregister">
+
+            </form>
+
+
         </div>
+    </div>
     </div>
 
 {% endblock %}
