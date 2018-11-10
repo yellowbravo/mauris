@@ -16,6 +16,7 @@ app.secret_key = 'IsYRsz62EKhfWRKHEP2dyPIKGx55CD3G'
 def index():
     return admin_view()
 
+
 @app.route('/consumer/')
 def consumer():
     if not session.get('logged_in'):
