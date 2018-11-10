@@ -44,24 +44,7 @@
 
         {% if has_data %}
 
-            <div class="col-lg-3 col-md-6">
-                <div class="card">
-                    <div class="card-body">
-                        <div class="stat-widget-four">
-                            <div class="stat-icon dib">
-                                <i class="ti-pulse text-muted"></i>
-                            </div>
-                            <div class="stat-content">
-                                <div class="text-left dib">
-                                    <div class="stat-heading">Pmax</div>
-                                    <div class="stat-text">12.2 kW</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+            {% for key, val in data.items() %}
             <div class="col-lg-3 col-md-6">
                 <div class="card">
                     <div class="card-body">
@@ -71,16 +54,15 @@
                             </div>
                             <div class="stat-content">
                                 <div class="text-left dib">
-                                    <div class="stat-heading">Consommation</div>
-                                    <div class="stat-text">12.2 kW</div>
+                                    <div class="stat-heading">{{ key }} - Energie</div>
+                                    <div class="stat-text">{{ val.sum }} kWh</div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <div class="col-lg-3 col-md-6">
+                 <div class="col-lg-3 col-md-6">
                 <div class="card">
                     <div class="card-body">
                         <div class="stat-widget-four">
@@ -89,42 +71,26 @@
                             </div>
                             <div class="stat-content">
                                 <div class="text-left dib">
-                                    <div class="stat-heading">Pmax</div>
-                                    <div class="stat-text">12.2 kW</div>
+                                    <div class="stat-heading">{{ key }} - PMax</div>
+                                    <div class="stat-text">{{ val.pmax }} kW</div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            {% endfor %}
 
-            <div class="col-lg-3 col-md-6">
-                <div class="card">
-                    <div class="card-body">
-                        <div class="stat-widget-four">
-                            <div class="stat-icon dib">
-                                <i class="ti-pulse text-muted"></i>
-                            </div>
-                            <div class="stat-content">
-                                <div class="text-left dib">
-                                    <div class="stat-heading">Pmax</div>
-                                    <div class="stat-text">12.2 kW</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="mb-3">Consommation </h4>
+{#                        <h4 class="mb-3">Consommation </h4>#}
                         <canvas id="canvas"></canvas>
                     </div>
                 </div>
             </div>
-        {% endif %}
+
     </div>
 
     <script>
@@ -133,13 +99,17 @@
             type: 'line',
             data: {
                 labels: {{ index|safe }},
-                datasets: [{
-                    label: 'My First dataset',
+                datasets: [
+                    {% for key, val in data.items() %}
+                    {
+                    label: '{{ key }}',
                     backgroundColor: 'rgb(255, 99, 132)',
                     borderColor: 'rgb(255, 99, 132)',
-                    data: {{ val|safe }},
+                    data: {{ val.data }},
                     fill: false,
-                }]
+                },
+                    {% endfor %}
+                ]
             },
             options: {
                 responsive: true,
@@ -237,5 +207,6 @@
             window.myLine.update();
         });
     </script>
+    {% endif %}
 
 {% endblock %}
