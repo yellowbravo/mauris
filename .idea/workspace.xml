@@ -2,41 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a95ba602-053a-4400-950d-a6c43d264b65" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/static/assets/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/css/style.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/js/dashboard.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/js/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/js/init-scripts/chart-js/chartjs-init.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/js/init-scripts/data-table/datatables-init.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/js/init-scripts/flot-chart/curvedLines.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/js/init-scripts/flot-chart/flot-chart-init.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/js/init-scripts/flot-chart/flot-tooltip/jquery.flot.tooltip.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/js/init-scripts/gmap/gmap.init.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/js/init-scripts/peitychart/peitychart.init.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/js/init-scripts/vector-map/vector.init.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/js/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/js/widgets.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/scss/_gauge.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/scss/_socials.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/scss/_switches.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/scss/_variables.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/scss/_widgets.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/scss/style.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/admin.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/avatar/1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/avatar/2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/avatar/3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/avatar/4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/avatar/5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/avatar/6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/logo2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/placeholder.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/twitter_corner_black.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/twitter_corner_blue.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/admin.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/consumer.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/consumer.html" afterDir="false" />
@@ -49,24 +15,33 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/Mauris$Mauris.coverage" NAME="Mauris Coverage Results" MODIFIED="1541810837964" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Mauris$Mauris.coverage" NAME="Mauris Coverage Results" MODIFIED="1541812433311" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="app.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="app.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="70">
-              <caret line="9" column="18" lean-forward="true" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+            <state relative-caret-position="430">
+              <caret line="31" column="35" lean-forward="true" selection-start-line="31" selection-start-column="35" selection-end-line="31" selection-end-column="35" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="base.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="admin.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/admin.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="16" column="48" selection-start-line="16" selection-start-column="48" selection-end-line="16" selection-end-column="48" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="85" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="85" />
+            <state relative-caret-position="326">
+              <caret line="291" column="15" lean-forward="true" selection-start-line="291" selection-start-column="15" selection-end-line="291" selection-end-column="15" />
             </state>
           </provider>
         </entry>
@@ -74,8 +49,8 @@
       <file leaf-file-name="consumer.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/consumer.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="27">
-              <caret line="2" selection-start-line="2" selection-end-line="2" />
+            <state relative-caret-position="304">
+              <caret line="39" column="33" lean-forward="true" selection-start-line="39" selection-start-column="33" selection-end-line="39" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -83,8 +58,8 @@
       <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="88">
-              <caret line="10" column="56" selection-start-line="10" selection-start-column="56" selection-end-line="10" selection-end-column="56" />
+            <state relative-caret-position="184">
+              <caret line="29" column="14" lean-forward="true" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -121,6 +96,8 @@
       <find>lineChart</find>
       <find>log</find>
       <find>Logout</find>
+      <find>Dashb</find>
+      <find>admin_view</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -129,9 +106,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/templates/consumer.html" />
         <option value="$PROJECT_DIR$/templates/base.html" />
         <option value="$PROJECT_DIR$/templates/login.html" />
+        <option value="$PROJECT_DIR$/templates/admin.html" />
+        <option value="$PROJECT_DIR$/templates/consumer.html" />
         <option value="$PROJECT_DIR$/app.py" />
       </list>
     </option>
@@ -144,7 +122,7 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="y" value="23" />
-    <option name="width" value="1365" />
+    <option name="width" value="1067" />
     <option name="height" value="877" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -161,62 +139,6 @@
             <path>
               <item name="Mauris" type="b2602c69:ProjectViewProjectNode" />
               <item name="Mauris" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Mauris" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Mauris" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Mauris" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Mauris" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Mauris" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Mauris" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Mauris" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Mauris" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="init-scripts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Mauris" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Mauris" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="init-scripts" type="462c0819:PsiDirectoryNode" />
-              <item name="chart-js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Mauris" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Mauris" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="vendors" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Mauris" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Mauris" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="vendors" type="462c0819:PsiDirectoryNode" />
-              <item name="chart.js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Mauris" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Mauris" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="vendors" type="462c0819:PsiDirectoryNode" />
-              <item name="chart.js" type="462c0819:PsiDirectoryNode" />
-              <item name="dist" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Mauris" type="b2602c69:ProjectViewProjectNode" />
@@ -300,11 +222,25 @@
       <option name="project" value="LOCAL" />
       <updated>1541806499800</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="template ok">
+      <created>1541811313593</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1541811313593</updated>
+    </task>
+    <task id="LOCAL-00004" summary="login ready">
+      <created>1541811665160</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1541811665160</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1365" height="877" extended-state="0" />
+    <frame x="0" y="23" width="1067" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -314,14 +250,14 @@
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Python Console" />
       <window_info anchor="bottom" id="Terminal" weight="0.32893" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2244898" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2897561" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="right" id="Database" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32893" />
       <window_info anchor="right" id="SciView" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -338,7 +274,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="template ok" />
-    <option name="LAST_COMMIT_MESSAGE" value="template ok" />
+    <MESSAGE value="login ready" />
+    <option name="LAST_COMMIT_MESSAGE" value="login ready" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/static/vendors/flot/API.md">
@@ -356,31 +293,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/login.html">
+    <entry file="file://$PROJECT_DIR$/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="10" column="56" selection-start-line="10" selection-start-column="56" selection-end-line="10" selection-end-column="56" />
+        <state relative-caret-position="326">
+          <caret line="291" column="15" lean-forward="true" selection-start-line="291" selection-start-column="15" selection-end-line="291" selection-end-column="15" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.py">
+    <entry file="file://$PROJECT_DIR$/templates/login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="70">
-          <caret line="9" column="18" lean-forward="true" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+        <state relative-caret-position="184">
+          <caret line="29" column="14" lean-forward="true" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/admin.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="48" selection-start-line="16" selection-start-column="48" selection-end-line="16" selection-end-column="48" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/consumer.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        <state relative-caret-position="304">
+          <caret line="39" column="33" lean-forward="true" selection-start-line="39" selection-start-column="33" selection-end-line="39" selection-end-column="33" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base.html">
+    <entry file="file://$PROJECT_DIR$/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="85" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="85" />
+        <state relative-caret-position="430">
+          <caret line="31" column="35" lean-forward="true" selection-start-line="31" selection-start-column="35" selection-end-line="31" selection-end-column="35" />
         </state>
       </provider>
     </entry>
