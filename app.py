@@ -29,11 +29,13 @@ def login():
     password = '1234'
 
     if request.form['password'] == password and request.form['username'] == consumer_user:
+        session['user'] = consumer_user
         session['logged_in'] = True
 
         return consumer()
 
     elif request.form['password'] == password and request.form['username'] == admin:
+        session['user'] = admin
         session['logged_in'] = True
 
         return admin_view()
