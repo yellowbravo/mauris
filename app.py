@@ -30,6 +30,7 @@ def meter(pod):
         return render_template('login.html')
     else:
         template_data = dict()
+        template_data['has_data'] = False
         if request.method == 'POST':
             start = datetime.datetime.strptime(request.form['start'], '%Y-%m-%d')
             end = datetime.datetime.strptime(request.form['end'], '%Y-%m-%d') + datetime.timedelta(days=1)
@@ -45,21 +46,26 @@ def meter(pod):
             raw_data = sorted(raw_data, key=itemgetter('datetime'))
 
             obis_codes = db.meters.find_one({'pod': pod})['obis']
+            obis_infos = list(db.obis_codes.find())
             df = pd.DataFrame(raw_data)
             sums = df.sum()
             data = dict()
             for o in obis_codes:
+                ob = next((item for item in obis_infos if item["code"] == o))
                 o = o.replace('.', '_')
                 data[o] = {'data': list(df[o].values),
                            'sum': sums[o],
-                           'pmax': df[o].max()}
+                           'pmax': df[o].max(),
+                           'name': ob['name'],
+                           'color': 'rgb(150,25,30)'
+                           }
 
             index = list()
 
             for d in raw_data:
                 ts = d['datetime']
-                date_str = "Date({0}, {1}, {2}, {3}, {4}, {5})".format(ts.year, ts.month, ts.day,
-                                                                       ts.hour, ts.minute, ts.second)
+                date_str = "{0}/{1}".format(ts.day, ts.month)
+
 
                 index.append(date_str)
 
@@ -68,6 +74,8 @@ def meter(pod):
                 'has_data': True,
                 'index': index,
                 'obis_codes': obis_codes,
+                'start': start.strftime("%d-%m-%Y"),
+                'end': end.strftime("%d-%m-%Y"),
                 }
 
         template_data['pod'] = pod
