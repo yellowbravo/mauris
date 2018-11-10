@@ -1,12 +1,11 @@
 {% extends "base.html" %}
 {% block body %}
 
-
     <div class="breadcrumbs">
         <div class="col-sm-4">
             <div class="page-header float-left">
                 <div class="page-title">
-                    <h1>Rajouter un compteur individuel </h1>
+                    <h1>Rajouter un compteur virtuel </h1>
                 </div>
             </div>
         </div>
@@ -14,7 +13,7 @@
             <div class="page-header float-right">
                 <div class="page-title">
                     <ol class="breadcrumb text-right">
-                        <li class="active">Entrer un POD existant </li>
+                        <li class="active">Génération d'un POD virtuel </li>
                     </ol>
                 </div>
             </div>
@@ -25,7 +24,7 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
-                    <strong>Définir les informations du compteur</strong>
+                    <strong>Définir les informations du nouveau compteur</strong>
                 </div>
                 <div class="card-body card-block">
                     <form action method="post" class="form-horizontal">
@@ -44,8 +43,34 @@
                                 <label for="hf-pod" class=" form control-label">POD du compteur </label>
                             </div>
                             <div class="col-12 col-md-9">
-                                <input type="password" id="hf-pod" name="hf-pod" placeholder="Entrer un POD existant..." class="form-control">
-                                <span class="help-block">Merci d'ajouter le POD existant </span>
+                                <input type="password" id="hf-pod" name="hf-pod" placeholder="Entrer un nouveau POD..." class="form-control">
+                                <span class="help-block">Merci d'ajouter un POD </span>
+                            </div>
+                        </div>
+
+                        <div class="row form-group">
+                            <div class="card-body">
+                                <select data-placeholder="Sélectionner des compteurs..." multiple class="standardSelect" style="display: none;">
+                                    <option value></option>
+                                    <option value="CH1014001234500000000000000014497">CH1014001234500000000000000014497</option>
+                                    <option value="CH1014001234500000000000000014498">CH1014001234500000000000000014498</option>
+                                    <option value="CH1014001234500000000000000014499">CH1014001234500000000000000014499</option>
+                                </select>
+
+                                <div class="chosen-container chosen-container-multi" title style="width: 100%;">
+                                    <ul class="chosen-choices">
+                                        <li class="search-field">
+                                            <input class="chosen-search-input default" type="text" autocomplete="off" value="Sélectionner des compteurs..." style="width: 137px;">
+                                        </li>
+                                    </ul>
+                                    <div class="chosen-drop">
+                                        <ul class="chosen-results">
+                                            <li class="active-result" data-option-array-index="1">CH1014001234500000000000000014497</li>
+                                            <li class="active-result" data-option-array-index="2">CH1014001234500000000000000014498</li>
+                                            <li class="active-result" data-option-array-index="3">CH1014001234500000000000000014499</li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
